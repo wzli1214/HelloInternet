@@ -1,5 +1,5 @@
 ### Team member:
-Weizhao Li && Zhuolun Gao
+Weizhao Li & Zhuolun Gao
 
 ### Dependencies:
 + Java JDK
@@ -23,7 +23,7 @@ scala RpcServer.scala
 
 ### Step 4:
 
-On AWS cloud9, clic + button, open a new terminal. Run the client like this:
+On AWS cloud9, click + button, open a new terminal. Run the client like this:
 
 ```bash
 scala RpcClient.scala
