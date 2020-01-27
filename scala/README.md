@@ -15,18 +15,18 @@ https://docs.aws.amazon.com/cloud9/latest/user-guide/sample-java.html#sample-jav
 Run the setup.sh to install the scala on Ubuntu environment.
 
 ### Step 3:
-Run the server:
+Run the server with port number:
 
 ```bash
-scala RpcServer.scala
+scala RpcServer.scala 10001
 ```
 
 ### Step 4:
 
-On AWS cloud9, click + button, open a new terminal. Run the client like this:
+On AWS cloud9, click + button, open a new terminal. Run the client with the server's hostname/IP and port like this:
 
 ```bash
-scala RpcClient.scala
+scala RpcClient.scala localhost 10001
 ```
 
 ### Result

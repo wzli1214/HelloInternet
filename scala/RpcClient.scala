@@ -4,9 +4,14 @@ import java.net.{InetAddress, Socket}
 object RpcClient {
 
   def main(args: Array[String]): Unit = {
+    
+    if(args.length != 2) {
+      println("the number of arguments of args not equals 2.")
+      System.exit(0)
+    }
     //Set up the socket
-    val ia: InetAddress = InetAddress.getByName("localhost")
-    val socket: Socket = new Socket(ia,10001)
+    val ia: InetAddress = InetAddress.getByName(args(0))
+    val socket: Socket = new Socket(ia,args(1).toInt)
 
     //Set up the input and output stream
     val out: ObjectOutputStream = new ObjectOutputStream(new DataOutputStream(socket.getOutputStream))
@@ -15,10 +20,6 @@ object RpcClient {
     val clientLanguage = "Scala"
     println("Sending: " + "Hello in " + clientLanguage)
     val msg =  "Hello in " + clientLanguage
-
-  
-    // val msg = "Hello in Scala"
-    // println("The client is going to send："+ msg)
 
     //Send the msg to the server
     out.writeUTF(msg)
