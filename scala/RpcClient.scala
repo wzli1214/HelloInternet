@@ -11,12 +11,16 @@ object RpcClient {
     //Set up the input and output stream
     val out: ObjectOutputStream = new ObjectOutputStream(new DataOutputStream(socket.getOutputStream))
     val in: DataInputStream = new DataInputStream(socket.getInputStream)
+    
+    val clientLanguage = "Scala"
+    println("Sending: " + "Hello in " + clientLanguage)
+    val msg =  "Hello in " + clientLanguage
 
   
-    val msg = "Hello in Scala"
-    println("The client is going to send："+ msg)
+    // val msg = "Hello in Scala"
+    // println("The client is going to send："+ msg)
 
-    //Send the msg to the client
+    //Send the msg to the server
     out.writeUTF(msg)
     out.flush()
 
@@ -24,7 +28,8 @@ object RpcClient {
     val result: String = in.readUTF()
     println("The server responded：" + result)
     in.close()
-    out.close()
+    out.close
+    
     socket.close()
 
   }
