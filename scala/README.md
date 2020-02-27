@@ -52,3 +52,15 @@ Use flush() to send the message. Use readUTF() to receive the message.
 #### Close
 
 Use close() to close the input and output stream, use close() to close the socket.
+
+
+### Test
+
+helloScala is the new version of the client that we fixed. Now, this client enables to work with official server, print the error
+if server is unavailable, prit error on invalid arguments.
+
+Follow this command to connect with official python server.
+
+```bash
+scala helloScala.scala 8080
+```
