@@ -54,13 +54,13 @@ Use close() to close the input and output stream, use close() to close the socke
 ### Test Case
 #### Test case 1:
 
-***Run scala server with scala client, follow the instruction below.***
+Run scala server with scala client, follow the instruction below.
 
 Step A:
 Run the server with port number:
 
 ```bash
-scala RpcServer.scala 10001
+scala hellosrvScala.scala 8080
 ```
 
 Step B:
@@ -68,7 +68,7 @@ Step B:
 On AWS cloud9, click + button, open a new terminal. Run the client with the server's hostname/IP and port like this:
 
 ```bash
-scala RpcClient.scala localhost 10001
+scala helloScala.scala localhost 8080
 ```
 
 Result
@@ -76,7 +76,7 @@ The client would send "Hello in Scala", once the server receives the message, th
 
 
 #### Test case 2:
-***Run helloScala client with official python server.***
+Run helloScala client with official python server.
 
 helloScala is the new version of the client that we fixed. Now, this client enables to work with official server, print the error
 if server is unavailable, prit error on invalid arguments.
@@ -92,14 +92,14 @@ python hellosrvPython.py
 Start the scala client:
 
 ```bash
-scala helloScala.scala 8080
+scala helloScala.scala localhost 8080
 ```
 
 Result:
 Now you can see the communication results.
 
 #### Test case 3:
-***Run helloScala server with official python client.***
+Run helloScala server with official python client.
 
 hellosrvScala is the new fixed version of server. Now, it enables to work with official client.
 
