@@ -54,7 +54,7 @@ Use close() to close the input and output stream, use close() to close the socke
 ### Test Case
 #### Test case 1:
 
-Run scala server with scala client, follow the instruction below.
+***Run scala server with scala client, follow the instruction below.***
 
 Step A:
 Run the server with port number:
@@ -76,7 +76,7 @@ The client would send "Hello in Scala", once the server receives the message, th
 
 
 #### Test case 2:
-Run helloScala client with official python server.
+***Run helloScala client with official python server.***
 
 helloScala is the new version of the client that we fixed. Now, this client enables to work with official server, print the error
 if server is unavailable, prit error on invalid arguments.
@@ -99,7 +99,7 @@ Result:
 Now you can see the communication results.
 
 #### Test case 3:
-Run helloScala server with official python client.
+***Run helloScala server with official python client.***
 
 hellosrvScala is the new fixed version of server. Now, it enables to work with official client.
 
